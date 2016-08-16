@@ -1,3 +1,9 @@
 <a href="<%- url_for(post.path) %>" class="<%= class_name %>">
     <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, date_format) %></time>
 </a>
+<% if (post.modified) { %>
+<span class='dateModified'>
+	modified
+ 	<time datetime="<%= date_xml(post.modified) %>" itemprop="dateModified"><%= date(post.modified, date_format) %></time>
+</span>
+<% } %>
