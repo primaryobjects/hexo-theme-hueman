@@ -123,4 +123,6 @@
         }
     });
 
+    // Show Disqus comments >= 1.
+	window.setTimeout(function() { $('.disqus-comment-count:not(:contains("0 Comments"))').parent().fadeIn(); }, 1000);
 })(jQuery);
