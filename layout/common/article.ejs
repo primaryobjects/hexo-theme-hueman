@@ -8,6 +8,9 @@
         <% if (post.layout != 'page') { %>
             <div class="article-subtitle">
                 <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
+                <% if (theme.customize.showAuthor && post.tags && theme.menu && theme.menu.About && config.author){ %>
+                  <%- partial('post/author', {class_name: 'article-author-link'}) %>
+                <% } %>                
                 <% if (theme.customize.tags_position != 'bottom') { %>
                     <%- partial('post/tag') %>
                 <% } %>
