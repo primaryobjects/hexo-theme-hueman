@@ -9,7 +9,7 @@ hexo.extend.helper.register('excerpt', function (post) {
     if (post.excerpt) {
         excerpt = post.excerpt.replace(/\<[^\>]+\>/g, '');
     } else {
-        excerpt = post.content.replace(/\<[^\>]+\>/g, '').substring(0, 200);
+        excerpt = post.content.replace(/\<[^\>]+\>/g, '').replace('Introduction', '').substring(0, 200);
     }
     return excerpt;
 });
