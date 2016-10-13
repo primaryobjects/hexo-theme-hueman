@@ -1,6 +1,6 @@
 <% if (post.prev || post.next) { %>
 <nav id="article-nav">
-    <% if (post.prev) { %>
+    <% if (post.prev && !post.prev.hidden) { %>
         <a href="<%- url_for(post.prev.path) %>" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption"><%= __('sidebar.newer') %></strong>
         <p class="article-nav-title">
@@ -13,7 +13,7 @@
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     <% } %>
-    <% if (post.next) { %>
+    <% if (post.next && !post.next.hidden) { %>
         <a href="<%- url_for(post.next.path) %>" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption"><%= __('sidebar.older') %></strong>
         <p class="article-nav-title"><%= post.next.title %></p>
