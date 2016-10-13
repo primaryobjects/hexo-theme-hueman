@@ -3,14 +3,16 @@
     <section class="archives-wrap">
         <div class="archives">
     <% page.posts.each(function(post, i) { %>
-        <% var year = post.date.year(); %>
-        <% postCount++; %>
-        <% if (postCount % 2 == 1) { %>
-            <div class="article-row">
-        <% } %>
-            <%- partial('summary', { post: post }) %>
-        <% if (postCount == page.posts.length || postCount % 2 == 0) { %>
-            </div>
+        <% if (!post.hidden) { %>
+            <% var year = post.date.year(); %>
+            <% postCount++; %>
+            <% if (postCount % 2 == 1) { %>
+                <div class="article-row">
+            <% } %>
+                <%- partial('summary', { post: post }) %>
+            <% if (postCount == page.posts.length || postCount % 2 == 0) { %>
+                </div>
+            <% } %>
         <% } %>
     <% }) %>
 <% } else { %>
