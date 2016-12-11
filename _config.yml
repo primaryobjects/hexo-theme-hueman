@@ -2,6 +2,7 @@
 menu:
   Home: /
   About: /kory-becker/
+  Book: http://shop.oreilly.com/product/9781939902443.do
   Contact: /contact/
   Subscribe: http://feedburner.google.com/fb/a/mailverify?uri=PrimaryObjects
   Categories:
@@ -65,4 +66,5 @@ miscellaneous:
     twitter_id: PrimaryObjects
     google_plus: https://plus.google.com/107815270870071104283/posts
   links:
+    Building Voice-Enabled Apps with Alexa: http://shop.oreilly.com/product/9781939902443.do
     Archive: /archives/
