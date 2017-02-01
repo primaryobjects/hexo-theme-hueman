@@ -32,7 +32,7 @@ customize:
 
 # Widgets
 widgets:
-  - recent_posts
+  - sticky_posts
   - category
   - links
 
