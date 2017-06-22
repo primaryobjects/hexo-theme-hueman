@@ -49,7 +49,7 @@
         if($('.page-title-link').length > 0){
             if ($(this).html().toUpperCase() == $('.page-title-link').html().toUpperCase()) {
                 $(this).addClass('current');
-            } else if ($(this).attr('href') == $('.page-title-link').attr('data-url')) {
+            } else if ($(this).attr('href') == $('.page-title-link').attr('data-url').replace('index.html', '')) {
                 $(this).addClass('current');
             }
         }
