@@ -49,8 +49,13 @@
         if($('.page-title-link').length > 0){
             if ($(this).html().toUpperCase() == $('.page-title-link').html().toUpperCase()) {
                 $(this).addClass('current');
-            } else if ($(this).attr('href') == $('.page-title-link').attr('data-url').replace('index.html', '')) {
-                $(this).addClass('current');
+            } else {
+            	var dataUrl = $('.page-title-link').attr('data-url');
+            	if (dataUrl) {
+	            	if ($(this).attr('href') == dataUrl.replace('index.html', '')) {
+	                	$(this).addClass('current');
+	                }
+            	}
             }
         }
     });
