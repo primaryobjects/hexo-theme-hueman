@@ -2,7 +2,7 @@
 menu:
   Home: /
   About: /kory-becker/
-  Book: http://shop.oreilly.com/product/9781939902443.do
+  Book: https://www.amazon.com/Building-Voice-Enabled-Apps-Alexa-Becker-ebook/dp/B01NAV180F
   Contact: /contact/
   Subscribe: http://feedburner.google.com/fb/a/mailverify?uri=PrimaryObjects
   Categories:
@@ -66,5 +66,5 @@ miscellaneous:
     twitter_id: PrimaryObjects
     google_plus: https://plus.google.com/107815270870071104283/posts
   links:
-    Building Voice-Enabled Apps with Alexa: http://shop.oreilly.com/product/9781939902443.do
+    Building Voice-Enabled Apps with Alexa: https://www.amazon.com/Building-Voice-Enabled-Apps-Alexa-Becker-ebook/dp/B01NAV180F
     Archive: /archives/
