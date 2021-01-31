@@ -2,7 +2,20 @@
 <% var postCount = 0; %>
     <section class="archives-wrap">
         <div class="archives">
-    <% page.posts.each(function(post, i) { %>
+        <% page.current === 1 && !is_category() && site.posts.filter(post => post.pinned && !post.hidden).each(post => { %>
+            <% var year = post.date.year(); %>
+            <% postCount++; %>
+            <% if (postCount % 2 == 1) { %>
+                <div class="article-row">
+            <% } %>
+                <div class="pinned">
+                    <%- partial('summary', { post: post }) %>
+                </div>
+            <% if (postCount == page.posts.length || postCount % 2 == 0) { %>
+                </div>
+            <% } %>
+        <% }) %>
+        <% page.posts.each(function(post, i) { %>
         <% if (!post.hidden) { %>
             <% var year = post.date.year(); %>
             <% postCount++; %>
